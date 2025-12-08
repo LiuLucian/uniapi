@@ -15,14 +15,8 @@
 
 ---
 
-<!--
-TODO: 录制演示视频后，取消下面注释并上传 demo.gif
 <img src="demo.gif" alt="UniAPI Demo" width="700">
-<p><i>✨ 5 platforms, 1 unified API - that's it.</i></p>
--->
-
-**📹 Demo Video Coming Soon**
-*One-click startup → Browse API docs → Send Instagram DM in 3 lines of code*
+<p align="center"><i>✨ One interface, 5 platforms - that's it.</i></p>
 
 </div>
 
