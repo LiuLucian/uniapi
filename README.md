@@ -289,6 +289,4 @@ This project is for educational purposes only. Users are responsible for any con
 [![Built with UniAPI](https://img.shields.io/badge/Built%20with-UniAPI-blue?style=for-the-badge)](https://github.com/LiuLucian/uniapi)
 ```
 
-**UniAPI v1.0.0** - Built with [Claude Code](https://claude.com/claude-code) 🤖
-
 </div>
