@@ -1,0 +1,28 @@
+{
+  "twitter": {
+    "cookies": {
+      "auth_token": "your_twitter_auth_token_here",
+      "ct0": "your_twitter_ct0_token_here"
+    }
+  },
+  "instagram": {
+    "cookies": {
+      "sessionid": "your_instagram_sessionid_here"
+    }
+  },
+  "tiktok": {
+    "sessionid": "your_tiktok_sessionid_here"
+  },
+  "facebook": {
+    "cookies": {
+      "c_user": "your_facebook_user_id",
+      "xs": "your_facebook_xs_token"
+    }
+  },
+  "linkedin": {
+    "cookies": {
+      "li_at": "your_linkedin_li_at_token",
+      "JSESSIONID": "your_linkedin_jsessionid"
+    }
+  }
+}

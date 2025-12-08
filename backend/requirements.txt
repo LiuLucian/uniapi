@@ -1,0 +1,31 @@
+# FastAPI Backend Dependencies
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.25
+alembic==1.13.1
+asyncpg==0.29.0
+redis==5.0.1
+
+# Task Queue
+celery==5.3.6
+flower==2.0.1
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Scraping (从你的项目复用)
+playwright==1.40.0
+beautifulsoup4==4.12.2
+httpx==0.26.0
+fake-useragent==1.4.0
+flask==3.0.0
+
+# Utils
+python-dotenv==1.0.0
+loguru==0.7.2
