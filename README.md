@@ -26,6 +26,18 @@ TODO: 录制演示视频后，取消下面注释并上传 demo.gif
 
 </div>
 
+## 🎯 Why UniAPI?
+
+| Feature | Official APIs | UniAPI |
+|---------|--------------|--------|
+| **Approval** | Days/Weeks waiting | ✅ Instant - use immediately |
+| **Cost** | $$$-$$$$$ monthly | ✅ Free & Open Source |
+| **Rate Limits** | Strict (often 100-500/day) | ✅ Flexible |
+| **Feature Access** | Limited by API | ✅ Full platform features |
+| **Multi-platform Code** | 5 different APIs to learn | ✅ 1 unified interface |
+| **Setup Time** | Hours of reading docs | ✅ 5 minutes |
+| **Breaking Changes** | Frequent API deprecations | ✅ Stable interface |
+
 ## ✨ Features
 
 - 🎯 **Unified Interface**: All platforms use the same API interface with minimal learning curve
@@ -255,7 +267,11 @@ This project is open-sourced under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Issues and Pull Requests are welcome!
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+- 🐛 Found a bug? [Open an issue](https://github.com/LiuLucian/uniapi/issues/new)
+- 💡 Have an idea? [Start a discussion](https://github.com/LiuLucian/uniapi/discussions)
+- 🔧 Want to contribute code? Check out [good first issues](https://github.com/LiuLucian/uniapi/labels/good%20first%20issue)
 
 ## ⚠️ Disclaimer
 
@@ -263,4 +279,16 @@ This project is for educational purposes only. Users are responsible for any con
 
 ---
 
+<div align="center">
+
+**Built something cool with UniAPI?** Add this badge to your project:
+
+[![Built with UniAPI](https://img.shields.io/badge/Built%20with-UniAPI-blue?style=for-the-badge)](https://github.com/LiuLucian/uniapi)
+
+```markdown
+[![Built with UniAPI](https://img.shields.io/badge/Built%20with-UniAPI-blue?style=for-the-badge)](https://github.com/LiuLucian/uniapi)
+```
+
 **UniAPI v1.0.0** - Built with [Claude Code](https://claude.com/claude-code) 🤖
+
+</div>
