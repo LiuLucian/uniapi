@@ -8,10 +8,10 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
 [![Playwright](https://img.shields.io/badge/Playwright-1.40+-red.svg)](https://playwright.dev/)
-[![GitHub stars](https://img.shields.io/github/stars/Liu-Lucian/uniapi?style=social)](https://github.com/Liu-Lucian/uniapi/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Liu-Lucian/uniapi?style=social)](https://github.com/Liu-Lucian/uniapi/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/Liu-Lucian/uniapi)](https://github.com/Liu-Lucian/uniapi/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/Liu-Lucian/uniapi)](https://github.com/Liu-Lucian/uniapi/commits/main)
+[![GitHub stars](https://img.shields.io/github/stars/LiuLucian/uniapi?style=social)](https://github.com/LiuLucian/uniapi/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/LiuLucian/uniapi?style=social)](https://github.com/LiuLucian/uniapi/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/LiuLucian/uniapi)](https://github.com/LiuLucian/uniapi/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/LiuLucian/uniapi)](https://github.com/LiuLucian/uniapi/commits/main)
 
 ---
 
@@ -66,7 +66,7 @@ Social Media Platforms
 ### 1️⃣ Clone the Project
 
 ```bash
-git clone https://github.com/Liu-Lucian/uniapi.git
+git clone https://github.com/LiuLucian/uniapi.git
 cd uniapi
 ```
 
