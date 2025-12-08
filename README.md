@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**官方API风格的多平台社交媒体统一接口**
+**Official API-style unified interface for multi-platform social media**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -11,29 +11,29 @@
 
 </div>
 
-## ✨ 特性
+## ✨ Features
 
-- 🎯 **统一接口**: 所有平台使用相同的API接口，学习成本低
-- 🚀 **官方风格**: API设计模仿官方API，简洁优雅
-- 🔐 **Cookie认证**: 基于浏览器Cookie，无需申请开发者权限
-- 🤖 **浏览器自动化**: 使用Playwright绕过API限制
-- 📦 **一键部署**: 自动化安装和启动脚本
-- 🌐 **多平台支持**: Twitter、Instagram、TikTok、Facebook、LinkedIn
+- 🎯 **Unified Interface**: All platforms use the same API interface with minimal learning curve
+- 🚀 **Official-style Design**: API design mimics official APIs for simplicity and elegance
+- 🔐 **Cookie Authentication**: Browser cookie-based auth, no developer approval needed
+- 🤖 **Browser Automation**: Uses Playwright to bypass API limitations
+- 📦 **One-Click Deployment**: Automated installation and startup scripts
+- 🌐 **Multi-Platform Support**: Twitter, Instagram, TikTok, Facebook, LinkedIn
 
-## 🚀 支持的平台
+## 🚀 Supported Platforms
 
-| 平台 | Bridge Server | SDK | 状态 |
-|------|--------------|-----|------|
+| Platform | Bridge Server | SDK | Status |
+|----------|--------------|-----|--------|
 | **Twitter** | Port 5001 | `twitter_sdk.py` | ✅ 100% |
 | **Instagram** | Port 5002 | `instagram_sdk.py` | ✅ 100% |
 | **TikTok** | Port 5003 | `tiktok_sdk.py` | ✅ 100% |
 | **Facebook** | Port 5004 | `facebook_sdk.py` | ✅ 100% |
 | **LinkedIn** | Port 5005 | `linkedin_sdk.py` | ✅ 100% |
 
-## 🏗️ 架构设计
+## 🏗️ Architecture
 
 ```
-用户代码
+User Code
    ↓
 Python SDK (instagram_sdk.py, tiktok_sdk.py, etc.)
    ↓
@@ -41,211 +41,211 @@ FastAPI Main Server (Port 8000)
    ↓
 Bridge Servers (Ports 5001-5005)
    ↓
-Playwright 浏览器自动化
+Playwright Browser Automation
    ↓
-社交媒体平台
+Social Media Platforms
 ```
 
-## 📦 快速开始
+## 📦 Quick Start
 
-### 1️⃣ 克隆项目
+### 1️⃣ Clone the Project
 
 ```bash
 git clone https://github.com/Liu-Lucian/uniapi.git
 cd uniapi
 ```
 
-### 2️⃣ 一键安装
+### 2️⃣ One-Click Installation
 
 ```bash
 cd backend
 ./install.sh
 ```
 
-这将自动安装：
-- Python依赖 (FastAPI, Playwright, etc.)
-- Playwright浏览器驱动
-- 创建必要的目录和配置文件
+This will automatically install:
+- Python dependencies (FastAPI, Playwright, etc.)
+- Playwright browser drivers
+- Create necessary directories and configuration files
 
-### 3️⃣ 配置认证信息
+### 3️⃣ Configure Authentication
 
-编辑 `backend/platforms_auth.json`，填入各平台的Cookie：
+Edit `backend/platforms_auth.json` and add your platform cookies:
 
 ```json
 {
   "instagram": {
     "cookies": {
-      "sessionid": "你的Instagram sessionid"
+      "sessionid": "your_instagram_sessionid"
     }
   },
   "twitter": {
     "cookies": {
-      "auth_token": "你的Twitter auth_token",
-      "ct0": "你的Twitter ct0"
+      "auth_token": "your_twitter_auth_token",
+      "ct0": "your_twitter_ct0"
     }
   }
-  // ... 其他平台
+  // ... other platforms
 }
 ```
 
-> 💡 如何获取Cookie？参考 [QUICK_START.md](QUICK_START.md)
+> 💡 How to get cookies? See [QUICK_START.md](QUICK_START.md)
 
-### 4️⃣ 启动服务
+### 4️⃣ Start Services
 
 ```bash
 cd backend
 ./start_uniapi.sh
 ```
 
-服务启动后会自动进行健康检查，看到所有 ✅ 标记即表示成功。
+After startup, automatic health checks will run. All ✅ marks indicate success.
 
-### 5️⃣ 使用API
+### 5️⃣ Use the API
 
-#### 方式1: 使用Python SDK（推荐）
+#### Method 1: Python SDK (Recommended)
 
 ```python
 from instagram_sdk import InstagramAPI
 from tiktok_sdk import TikTokAPI
 
-# Instagram示例
+# Instagram example
 insta = InstagramAPI()
 user = insta.get_user("instagram")
-print(f"用户名: {user['username']}, 粉丝: {user['followers']}")
+print(f"Username: {user['username']}, Followers: {user['followers']}")
 
 insta.like_post("https://www.instagram.com/p/ABC123/")
 insta.send_dm("username", "Hello from UniAPI!")
 
-# TikTok示例
+# TikTok example
 tiktok = TikTokAPI()
 user = tiktok.get_user("@username")
 tiktok.like_video("https://www.tiktok.com/@user/video/123")
 ```
 
-#### 方式2: 直接调用REST API
+#### Method 2: Direct REST API
 
 ```bash
-# 查看API文档
+# View API documentation
 open http://localhost:8000/api/docs
 
-# 使用curl测试
+# Test with curl
 curl http://localhost:8000/api/v1/instagram/users/instagram
 
-# 点赞帖子
+# Like a post
 curl -X POST http://localhost:8000/api/v1/instagram/posts/like \
   -H "Content-Type: application/json" \
   -d '{"post_url": "https://www.instagram.com/p/ABC123/"}'
 ```
 
-## 🏗️ 统一API接口
+## 🏗️ Unified API Interface
 
-所有平台SDK都遵循**相同的接口设计**：
+All platform SDKs follow the **same interface design**:
 
 ```python
-# 用户操作
-api.get_user(username)              # 获取用户信息
-api.follow_user(username)           # 关注用户
+# User operations
+api.get_user(username)              # Get user info
+api.follow_user(username)           # Follow user
 
-# 内容操作
-api.like_post(url)                  # 点赞/喜欢
-api.comment(url, text)              # 评论
-api.send_dm(username, message)      # 发送私信
+# Content operations
+api.like_post(url)                  # Like/favorite
+api.comment(url, text)              # Comment
+api.send_dm(username, message)      # Send DM
 
-# 批量操作
-api.batch_like(urls, delay=5)       # 批量点赞（自动延迟）
+# Batch operations
+api.batch_like(urls, delay=5)       # Batch like with auto-delay
 ```
 
-## 🛠️ 管理命令
+## 🛠️ Management Commands
 
 ```bash
-# 启动所有服务
+# Start all services
 cd backend && ./start_uniapi.sh
 
-# 停止所有服务
+# Stop all services
 cd backend && ./stop_uniapi.sh
 
-# 查看日志
+# View logs
 tail -f backend/logs/fastapi.log
 tail -f backend/logs/instagram_bridge.log
 
-# 检查服务状态
+# Check service status
 curl http://localhost:8000/health
 curl http://localhost:5002/health  # Instagram bridge
 ```
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 uniapi/
 ├── backend/
-│   ├── main.py                 # FastAPI主服务器
-│   ├── platforms/              # 平台Bridge服务器
+│   ├── main.py                 # FastAPI main server
+│   ├── platforms/              # Platform bridge servers
 │   │   ├── twitter/
 │   │   ├── instagram/
 │   │   ├── tiktok/
 │   │   ├── facebook/
 │   │   └── linkedin/
-│   ├── api/v1/                 # FastAPI路由
-│   ├── core/                   # 核心配置
-│   ├── start_uniapi.sh         # 启动脚本
-│   ├── stop_uniapi.sh          # 停止脚本
-│   └── install.sh              # 安装脚本
+│   ├── api/v1/                 # FastAPI routes
+│   ├── core/                   # Core configuration
+│   ├── start_uniapi.sh         # Startup script
+│   ├── stop_uniapi.sh          # Stop script
+│   └── install.sh              # Installation script
 ├── instagram_sdk.py            # Instagram Python SDK
 ├── tiktok_sdk.py               # TikTok Python SDK
 ├── facebook_sdk.py             # Facebook Python SDK
 ├── linkedin_sdk.py             # LinkedIn Python SDK
 ├── twitter_sdk.py              # Twitter Python SDK
-├── demo.py                     # 示例代码
-├── QUICK_START.md              # 快速开始指南
-└── README.md                   # 本文件
+├── demo.py                     # Example code
+├── QUICK_START.md              # Quick start guide
+└── README.md                   # This file
 ```
 
-## 🔧 技术栈
+## 🔧 Tech Stack
 
-- **FastAPI** - 高性能Python Web框架
-- **Playwright** - 跨浏览器自动化工具
-- **Flask** - Bridge服务器框架
-- **Pydantic** - 数据验证和类型提示
-- **Httpx** - 异步HTTP客户端
+- **FastAPI** - High-performance Python web framework
+- **Playwright** - Cross-browser automation tool
+- **Flask** - Bridge server framework
+- **Pydantic** - Data validation and type hints
+- **Httpx** - Async HTTP client
 
-## 📝 常见问题
+## 📝 FAQ
 
-### Q: 为什么不直接使用官方API？
+### Q: Why not use official APIs directly?
 
-A: 大多数社交媒体平台的官方API：
-- 需要申请开发者权限（审核流程复杂）
-- 功能受限（如Instagram不支持私信API）
-- 有严格的调用限制
-- 需要付费（如LinkedIn API）
+A: Most social media platforms' official APIs:
+- Require developer approval (complex review process)
+- Have limited functionality (e.g., Instagram doesn't support DM API)
+- Have strict rate limits
+- Require payment (e.g., LinkedIn API)
 
-UniAPI通过浏览器自动化绕过这些限制，提供更灵活的解决方案。
+UniAPI bypasses these limitations through browser automation, providing a more flexible solution.
 
-### Q: Cookie会过期吗？
+### Q: Do cookies expire?
 
-A: 会的。通常Cookie有效期为30-90天。过期后需要重新登录并更新 `platforms_auth.json`。
+A: Yes. Cookie validity is typically 30-90 days. After expiration, you need to log in again and update `platforms_auth.json`.
 
-### Q: 是否违反平台规则？
+### Q: Does this violate platform rules?
 
-A: 自动化操作可能违反平台服务条款。请仅用于个人学习和测试，不要用于商业用途或大规模操作。
+A: Automated operations may violate platform terms of service. Please use only for personal learning and testing, not for commercial purposes or large-scale operations.
 
-### Q: 如何避免被检测？
+### Q: How to avoid detection?
 
 A:
-- 使用 `auto_delay=True` 启用随机延迟
-- 不要频繁操作（建议每次操作间隔5-10秒）
-- 使用专用账号，不要用主账号
+- Use `auto_delay=True` to enable random delays
+- Don't operate too frequently (recommended 5-10 seconds between operations)
+- Use dedicated accounts, not your main account
 
-## 📄 许可证
+## 📄 License
 
-本项目基于 [MIT License](LICENSE) 开源。
+This project is open-sourced under the [MIT License](LICENSE).
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交Issue和Pull Request！
+Issues and Pull Requests are welcome!
 
-## ⚠️ 免责声明
+## ⚠️ Disclaimer
 
-本项目仅供学习交流使用。使用本项目造成的任何后果由使用者自行承担，作者不承担任何责任。
+This project is for educational purposes only. Users are responsible for any consequences of using this project. The author assumes no liability.
 
 ---
 
-**UniAPI v1.0.0** - 由 [Claude Code](https://claude.com/claude-code) 构建 🤖
+**UniAPI v1.0.0** - Built with [Claude Code](https://claude.com/claude-code) 🤖

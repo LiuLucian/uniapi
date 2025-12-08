@@ -1,21 +1,21 @@
-# UniAPI 快速开始指南
+# UniAPI Quick Start Guide
 
-## 1️⃣ 一键安装
+## 1️⃣ One-Click Installation
 
 ```bash
-# 克隆项目
-git clone https://github.com/your-username/uniapi.git
+# Clone the project
+git clone https://github.com/Liu-Lucian/uniapi.git
 cd uniapi/backend
 
-# 一键安装所有依赖
+# One-click install all dependencies
 ./install.sh
 ```
 
-## 2️⃣ 配置认证信息
+## 2️⃣ Configure Authentication
 
-### 方式1: 自动获取（推荐）
+### Method 1: Auto-Extract (Recommended)
 
-对于每个平台，我们提供了自动化的Cookie提取工具：
+We provide automated cookie extraction tools for each platform:
 
 ```bash
 # Instagram
@@ -34,122 +34,122 @@ python3 platforms/linkedin/save_cookies.py
 python3 platforms/twitter/save_cookies.py
 ```
 
-### 方式2: 手动配置
+### Method 2: Manual Configuration
 
-1. 复制示例配置文件：
+1. Copy the example configuration file:
 ```bash
 cp platforms_auth.json.example platforms_auth.json
 ```
 
-2. 手动填入各平台的Cookie（通过浏览器开发者工具获取）
+2. Manually fill in cookies for each platform (obtained through browser DevTools)
 
-## 3️⃣ 启动服务
+## 3️⃣ Start Services
 
 ```bash
-# 一键启动所有服务
+# One-click start all services
 ./start_uniapi.sh
 
-# 服务启动后会自动进行健康检查
-# 看到所有✅标记即表示启动成功
+# After startup, automatic health checks will run
+# All ✅ marks indicate successful startup
 ```
 
-## 4️⃣ 使用API
+## 4️⃣ Use the API
 
-### 方式1: 使用Python SDK（推荐）
+### Method 1: Python SDK (Recommended)
 
-创建文件 `test.py`:
+Create a file `test.py`:
 
 ```python
 from instagram_sdk import InstagramAPI
 from tiktok_sdk import TikTokAPI
 
-# Instagram示例
+# Instagram example
 insta = InstagramAPI()
 
-# 获取用户信息
+# Get user info
 user = insta.get_user("instagram")
-print(f"用户名: {user['username']}, 粉丝: {user['followers']}")
+print(f"Username: {user['username']}, Followers: {user['followers']}")
 
-# 点赞帖子
+# Like a post
 result = insta.like_post("https://www.instagram.com/p/ABC123/")
 print(result)
 
-# 发送私信
+# Send DM
 result = insta.send_dm("username", "Hello from UniAPI!")
 print(result)
 
-# TikTok示例
+# TikTok example
 tiktok = TikTokAPI()
 
-# 获取用户
+# Get user
 user = tiktok.get_user("@username")
 print(user)
 
-# 点赞视频
+# Like a video
 result = tiktok.like_video("https://www.tiktok.com/@user/video/123")
 print(result)
 ```
 
-运行测试：
+Run the test:
 ```bash
 python3 test.py
 ```
 
-### 方式2: 直接调用REST API
+### Method 2: Direct REST API Calls
 
 ```bash
-# 查看API文档
+# View API documentation
 open http://localhost:8000/api/docs
 
-# 使用curl测试
+# Test with curl
 curl http://localhost:8000/api/v1/instagram/users/instagram
 
-# 点赞帖子
+# Like a post
 curl -X POST http://localhost:8000/api/v1/instagram/posts/like \
   -H "Content-Type: application/json" \
   -d '{"post_url": "https://www.instagram.com/p/ABC123/"}'
 ```
 
-## 5️⃣ 停止服务
+## 5️⃣ Stop Services
 
 ```bash
 ./stop_uniapi.sh
 ```
 
-## 常见问题
+## FAQ
 
-### Q: 提示"依赖未安装"怎么办？
-A: 运行 `pip3 install --break-system-packages fastapi uvicorn playwright pydantic-settings`，然后运行 `playwright install`
+### Q: "Dependencies not installed" error?
+A: Run `pip3 install --break-system-packages fastapi uvicorn playwright pydantic-settings`, then run `playwright install`
 
-### Q: 健康检查失败？
-A: 检查日志文件：
+### Q: Health check failed?
+A: Check log files:
 ```bash
 tail -f logs/fastapi.log
 tail -f logs/instagram_bridge.log
 ```
 
-### Q: 如何获取Cookie？
+### Q: How to get cookies?
 A:
-1. 打开浏览器，登录目标平台
-2. 按F12打开开发者工具
-3. 切换到Application/Storage标签
-4. 找到Cookies部分，复制需要的Cookie值
+1. Open browser and log in to the target platform
+2. Press F12 to open DevTools
+3. Go to Application/Storage tab
+4. Find Cookies section, copy the required cookie values
 
-### Q: 支持哪些操作？
-A: 每个平台支持：
-- 获取用户信息
-- 点赞/喜欢内容
-- 评论
-- 发送私信
-- 关注/连接用户
-- 批量操作
+### Q: What operations are supported?
+A: Each platform supports:
+- Get user information
+- Like/favorite content
+- Comment
+- Send DM
+- Follow/connect users
+- Batch operations
 
-详细API文档见：http://localhost:8000/api/docs
+Detailed API documentation: http://localhost:8000/api/docs
 
-## 架构说明
+## Architecture
 
 ```
-用户代码
+User Code
    ↓
 Python SDK (instagram_sdk.py, tiktok_sdk.py, etc.)
    ↓
@@ -157,13 +157,13 @@ FastAPI Main Server (Port 8000)
    ↓
 Bridge Servers (Ports 5001-5005)
    ↓
-Playwright 浏览器自动化
+Playwright Browser Automation
    ↓
-社交媒体平台
+Social Media Platforms
 ```
 
-## 下一步
+## Next Steps
 
-- 查看完整文档: `README.md`
-- 查看示例代码: `example_usage.py`
-- API参考文档: http://localhost:8000/api/docs
+- View complete documentation: `README.md`
+- Check example code: `example_usage.py`
+- API reference: http://localhost:8000/api/docs
