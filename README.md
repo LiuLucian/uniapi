@@ -8,6 +8,21 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
 [![Playwright](https://img.shields.io/badge/Playwright-1.40+-red.svg)](https://playwright.dev/)
+[![GitHub stars](https://img.shields.io/github/stars/Liu-Lucian/uniapi?style=social)](https://github.com/Liu-Lucian/uniapi/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Liu-Lucian/uniapi?style=social)](https://github.com/Liu-Lucian/uniapi/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/Liu-Lucian/uniapi)](https://github.com/Liu-Lucian/uniapi/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Liu-Lucian/uniapi)](https://github.com/Liu-Lucian/uniapi/commits/main)
+
+---
+
+<!--
+TODO: 录制演示视频后，取消下面注释并上传 demo.gif
+<img src="demo.gif" alt="UniAPI Demo" width="700">
+<p><i>✨ 5 platforms, 1 unified API - that's it.</i></p>
+-->
+
+**📹 Demo Video Coming Soon**
+*One-click startup → Browse API docs → Send Instagram DM in 3 lines of code*
 
 </div>
 
