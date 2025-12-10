@@ -105,7 +105,7 @@ Use clear, descriptive commit messages:
 
 ## ❓ Questions?
 
-- Open a [Discussion](https://github.com/Liu-Lucian/uniapi/discussions) for questions
+- Open a [Discussion](https://github.com/LiuLucian/uniapi/discussions) for questions
 - Tag with `Q&A` category
 
 ## 🎉 Recognition

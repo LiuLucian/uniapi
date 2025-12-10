@@ -38,7 +38,7 @@ EOF
 python3 demo_quick.py
 
 # 4. 结束画面（10秒）
-# 显示 GitHub 链接: https://github.com/Liu-Lucian/uniapi
+# 显示 GitHub 链接: https://github.com/LiuLucian/uniapi
 ```
 
 ### 方案 B：纯代码演示（简洁版）
