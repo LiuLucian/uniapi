@@ -4,7 +4,7 @@
 
 ```bash
 # Clone the project
-git clone https://github.com/LiuLucian/uniapi.git
+git clone https://github.com/Liu-Lucian/uniapi.git
 cd uniapi/backend
 
 # One-click install all dependencies

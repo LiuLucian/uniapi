@@ -35,7 +35,7 @@ data-collection
 
 ## How to Add Topics
 
-1. Go to https://github.com/LiuLucian/uniapi
+1. Go to https://github.com/Liu-Lucian/uniapi
 2. Click the ⚙️ icon next to "About" section
 3. In the "Topics" field, add the topics above (one at a time or comma-separated)
 4. Click "Save changes"

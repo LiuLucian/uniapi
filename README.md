@@ -8,10 +8,10 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
 [![Playwright](https://img.shields.io/badge/Playwright-1.40+-red.svg)](https://playwright.dev/)
-[![GitHub stars](https://img.shields.io/github/stars/LiuLucian/uniapi?style=social)](https://github.com/LiuLucian/uniapi/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/LiuLucian/uniapi?style=social)](https://github.com/LiuLucian/uniapi/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/LiuLucian/uniapi)](https://github.com/LiuLucian/uniapi/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/LiuLucian/uniapi)](https://github.com/LiuLucian/uniapi/commits/main)
+[![GitHub stars](https://img.shields.io/github/stars/Liu-Lucian/uniapi?style=social)](https://github.com/Liu-Lucian/uniapi/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Liu-Lucian/uniapi?style=social)](https://github.com/Liu-Lucian/uniapi/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/Liu-Lucian/uniapi)](https://github.com/Liu-Lucian/uniapi/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Liu-Lucian/uniapi)](https://github.com/Liu-Lucian/uniapi/commits/main)
 
 ---
 
@@ -72,7 +72,7 @@ Social Media Platforms
 ### 1️⃣ Clone the Project
 
 ```bash
-git clone https://github.com/LiuLucian/uniapi.git
+git clone https://github.com/Liu-Lucian/uniapi.git
 cd uniapi
 ```
 
@@ -263,9 +263,9 @@ This project is open-sourced under the [MIT License](LICENSE).
 
 Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-- 🐛 Found a bug? [Open an issue](https://github.com/LiuLucian/uniapi/issues/new)
-- 💡 Have an idea? [Start a discussion](https://github.com/LiuLucian/uniapi/discussions)
-- 🔧 Want to contribute code? Check out [good first issues](https://github.com/LiuLucian/uniapi/labels/good%20first%20issue)
+- 🐛 Found a bug? [Open an issue](https://github.com/Liu-Lucian/uniapi/issues/new)
+- 💡 Have an idea? [Start a discussion](https://github.com/Liu-Lucian/uniapi/discussions)
+- 🔧 Want to contribute code? Check out [good first issues](https://github.com/Liu-Lucian/uniapi/labels/good%20first%20issue)
 
 ## ⚠️ Disclaimer
 
@@ -277,10 +277,10 @@ This project is for educational purposes only. Users are responsible for any con
 
 **Built something cool with UniAPI?** Add this badge to your project:
 
-[![Built with UniAPI](https://img.shields.io/badge/Built%20with-UniAPI-blue?style=for-the-badge)](https://github.com/LiuLucian/uniapi)
+[![Built with UniAPI](https://img.shields.io/badge/Built%20with-UniAPI-blue?style=for-the-badge)](https://github.com/Liu-Lucian/uniapi)
 
 ```markdown
-[![Built with UniAPI](https://img.shields.io/badge/Built%20with-UniAPI-blue?style=for-the-badge)](https://github.com/LiuLucian/uniapi)
+[![Built with UniAPI](https://img.shields.io/badge/Built%20with-UniAPI-blue?style=for-the-badge)](https://github.com/Liu-Lucian/uniapi)
 ```
 
 </div>

@@ -129,11 +129,11 @@ Social Media Platforms
 
 ## Project Links
 
-**GitHub:** https://github.com/LiuLucian/uniapi
+**GitHub:** https://github.com/Liu-Lucian/uniapi
 
 Installation is literally:
 ```bash
-git clone https://github.com/LiuLucian/uniapi.git
+git clone https://github.com/Liu-Lucian/uniapi.git
 cd uniapi/backend
 ./install.sh
 ./start_uniapi.sh
