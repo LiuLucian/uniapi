@@ -51,6 +51,36 @@
 | **Facebook** | Port 5004 | `facebook_sdk.py` | ✅ 100% |
 | **LinkedIn** | Port 5005 | `linkedin_sdk.py` | ✅ 100% |
 
+## 💼 Use Cases
+
+Perfect for:
+
+- 📈 **Marketing Automation** - Schedule and distribute content across all platforms
+- 🔍 **Lead Generation** - Auto-reply to comments containing specific keywords
+- 📊 **Social Listening** - Monitor brand mentions and competitor activity
+- 🤖 **Chatbot Development** - Build automated response systems
+- 📱 **Content Distribution** - Publish once, reach 5 platforms instantly
+- 🎯 **Agency Tools** - Manage multiple client accounts from one interface
+- 🔬 **Research Projects** - Collect social media data for analysis
+- 🎓 **Educational Projects** - Learn API design and browser automation
+
+**Real-world example:**
+```python
+# Monitor competitor posts and auto-respond to their followers
+from instagram_sdk import InstagramAPI
+
+api = InstagramAPI()
+competitors = ["competitor1", "competitor2"]
+
+for competitor in competitors:
+    posts = api.get_user_posts(competitor, limit=5)
+    for post in posts:
+        comments = api.get_post_comments(post.url)
+        for comment in comments:
+            # Engage with their audience
+            api.send_dm(comment.username, "Check out our product!")
+```
+
 ## 🏗️ Architecture
 
 ```
@@ -266,6 +296,43 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 - 🐛 Found a bug? [Open an issue](https://github.com/LiuLucian/uniapi/issues/new)
 - 💡 Have an idea? [Start a discussion](https://github.com/LiuLucian/uniapi/discussions)
 - 🔧 Want to contribute code? Check out [good first issues](https://github.com/LiuLucian/uniapi/labels/good%20first%20issue)
+
+## 🗺️ Roadmap
+
+### ✅ Completed (v1.0)
+- [x] Unified API for 5 platforms (Instagram, Twitter, TikTok, Facebook, LinkedIn)
+- [x] FastAPI main server with Swagger docs
+- [x] Browser automation with Playwright
+- [x] Cookie-based authentication
+- [x] One-click installation and startup
+
+### 🚧 In Progress (v1.1 - Q1 2025)
+- [ ] Webhook support for real-time events
+- [ ] Scheduled posting with cron-like syntax
+- [ ] Rate limiting and retry mechanisms
+- [ ] Enhanced error logging
+
+### 🔮 Planned (v2.0 - Q2 2025)
+- [ ] Analytics dashboard (engagement metrics across platforms)
+- [ ] Multi-account management per platform
+- [ ] AI-powered content generation (GPT integration)
+- [ ] Advanced search and filtering
+- [ ] Export data to CSV/JSON
+
+### 💡 Under Consideration
+- [ ] YouTube support
+- [ ] Reddit integration
+- [ ] WhatsApp Business API
+- [ ] Discord webhook support
+- [ ] Telegram bot API
+
+**Vote for features:** [Open a discussion](https://github.com/LiuLucian/uniapi/discussions) to suggest or vote on features!
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=LiuLucian/uniapi&type=Date)](https://star-history.com/#LiuLucian/uniapi&Date)
+
+**Help us grow!** Star the repo if you find it useful 🌟
 
 ## ⚠️ Disclaimer
 
