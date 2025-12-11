@@ -20,21 +20,36 @@ echo ""
 
 # 安装Python依赖
 echo "📦 安装Python依赖..."
-pip3 install --break-system-packages \
-    fastapi \
-    uvicorn \
-    pydantic \
-    pydantic-settings \
-    httpx \
-    playwright \
-    beautifulsoup4 \
-    flask \
-    python-dotenv \
-    loguru
 
-if [ $? -ne 0 ]; then
-    echo "❌ Python依赖安装失败"
-    exit 1
+# 优先使用requirements.txt
+if [ -f "requirements.txt" ]; then
+    echo "使用 requirements.txt 安装依赖..."
+
+    # 尝试使用 pip3 install -r requirements.txt
+    if pip3 install -r requirements.txt 2>/dev/null; then
+        echo "✅ 依赖安装成功"
+    # 如果失败，尝试 --user
+    elif pip3 install --user -r requirements.txt 2>/dev/null; then
+        echo "✅ 依赖安装成功 (使用 --user)"
+    # 如果还失败，尝试 --break-system-packages (仅macOS/某些Linux)
+    elif pip3 install --break-system-packages -r requirements.txt 2>/dev/null; then
+        echo "✅ 依赖安装成功 (使用 --break-system-packages)"
+    else
+        echo "❌ Python依赖安装失败"
+        echo "请尝试手动安装: pip3 install -r requirements.txt"
+        exit 1
+    fi
+else
+    # 没有requirements.txt，使用旧方法
+    echo "未找到 requirements.txt，使用直接安装..."
+    pip3 install fastapi uvicorn pydantic pydantic-settings httpx playwright beautifulsoup4 flask python-dotenv loguru 2>/dev/null || \
+    pip3 install --user fastapi uvicorn pydantic pydantic-settings httpx playwright beautifulsoup4 flask python-dotenv loguru 2>/dev/null || \
+    pip3 install --break-system-packages fastapi uvicorn pydantic pydantic-settings httpx playwright beautifulsoup4 flask python-dotenv loguru
+
+    if [ $? -ne 0 ]; then
+        echo "❌ Python依赖安装失败"
+        exit 1
+    fi
 fi
 
 echo "✅ Python依赖安装完成"
